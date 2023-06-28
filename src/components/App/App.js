@@ -10,7 +10,7 @@ const App = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [playlistName, setPlaylistName] = useState("New Playlist");
   const [playlistTracks, setPlaylistTracks] = useState([]);
-  const [totalTime, setTotalTime] = useState('0:0');
+
 
   const search = useCallback((term) => {
     Spotify.search(term).then(setSearchResults);
@@ -63,8 +63,7 @@ const App = () => {
             onNameChange={updatePlaylistName}
             onRemove={removeTrack}
             onSave={savePlaylist}
-            totalTime={totalTime}
-            handleTime = {setTotalTime}
+            
             
           />
         </div>
